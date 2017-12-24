@@ -1,0 +1,27 @@
+service_example_simple:
+  path: 'services_demo/simple'
+  defaults:
+    _controller: '\Drupal\services_demo\Controller\ServiceExampleController::simple_example'
+  requirements:
+    _access: 'TRUE'
+
+service_example_http:
+  path: 'services_demo/httpdemo'
+  defaults:
+    _controller: '\Drupal\services_demo\Controller\ServiceExampleController::http_demo'
+  requirements:
+    _access: 'TRUE'
+
+service_example_custom:
+  path: 'services_demo/customdemo'
+  defaults:
+    _controller: '\Drupal\services_demo\Controller\ServiceExampleController::custom_demo'
+  requirements:
+    _access: 'TRUE'
+
+service_example_language:
+  path: 'services_demo/language'
+  defaults:
+    _controller: '\Drupal\services_demo\Controller\ServiceExampleController::custom_language'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,8 @@
+name: Services Demo
+type: module
+description : 'Services demo module'
+package: Development
+# Information added by Drupal.org packaging script on 2017-06-06
+version: '8.x-1.0-alpha1'
+core: '8.x'
+datestamp: 1496774344

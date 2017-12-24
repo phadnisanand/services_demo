@@ -1,0 +1,15 @@
+services:
+  services_demo.example_service:
+    class: Drupal\services_demo\ServiceExampleService
+
+  services_demo.weather_underground:
+    class: Drupal\services_demo\WeatherUndergroundService
+    arguments: ["@http_client"]
+
+  link_generator:
+    class: Drupal\Core\Utility\LinkGenerator
+    arguments: ['@url_generator', '@module_handler', '@renderer']
+
+  language_manager:
+    class: Drupal\Core\Language\LanguageManager
+    arguments: ['@language.default']
