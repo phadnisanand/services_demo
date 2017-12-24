@@ -25,3 +25,10 @@ service_example_language:
     _controller: '\Drupal\services_demo\Controller\ServiceExampleController::custom_language'
   requirements:
     _access: 'TRUE'
+
+service_example_plugin:
+  path: 'services_demo/plugin'
+  defaults:
+    _controller: '\Drupal\services_demo\Controller\ServiceExampleController::custom_plugin'
+  requirements:
+    _access: 'TRUE'

@@ -63,4 +63,16 @@ class ServiceExampleController extends ControllerBase {
        '#markup' => $language
       ];
   }
+
+  public function custom_plugin() {
+    $unit_manager = \Drupal::service('plugin.manager.unit');
+    $unit_manager_definitions= $unit_manager->getDefinitions();
+    $unit_definition = $unit_manager->getDefinition('feet');
+    $feet_instance = $unit_manager->createInstance('feet');
+    $meters_label = $feet_instance->getLabel();
+    $meters_value = $feet_instance->toBase(12);
+    return [ 
+     '#markup' =>  $meters_label .  '  ' . $meters_value
+     ];
+  } 
 }

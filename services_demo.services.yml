@@ -13,3 +13,7 @@ services:
   language_manager:
     class: Drupal\Core\Language\LanguageManager
     arguments: ['@language.default']
+
+  plugin.manager.unit:
+    class: Drupal\services_demo\UnitManager
+    arguments: ['@cache.discovery', '@module_handler']
