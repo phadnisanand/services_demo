@@ -14,8 +14,8 @@ class ServicesDemoServiceProvider extends ServiceProviderBase implements Service
 	
 
 	$definition = $container->getDefinition('language_manager');
-    $definition->setClass('Drupal\services_demo\MyLanguage\MyLanguage')
-      ->addArgument(new Reference('entity_type.manager'));
+        $definition->setClass('Drupal\services_demo\MyLanguage\MyLanguage')
+        ->addArgument(new Reference('entity_type.manager'));
 
   }
 }
